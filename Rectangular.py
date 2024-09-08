@@ -1,9 +1,22 @@
-#basic operations
-width = 23
-height = 17
-area = width * height
-#to concat string & int, the int has to be converted to str first
-print("Area: " + str(area))
+# basic operations
+def main():
+    width = input("Enter the rectangles width: ")
+    height = input("Enter the rectangles height: ")
 
-perimeter = 2*(area)
-print("Perimeter: " + str(perimeter))
+    if width.isdecimal() and height.isdecimal():
+        if width.isdecimal() and height.isdecimal() > 0:
+            area = int(width) * int(height)
+            perimeter = 2 * area
+            output(area, perimeter)
+        else:
+            print("Width and height must be a positive integer")
+    else:
+        print("Width and height must be a positive integer")
+
+
+def output(area, perimeter):
+    print("Area: " + str(area))
+    print("Perimeter: " + str(perimeter))
+
+
+main()
