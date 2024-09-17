@@ -16,6 +16,11 @@ def main() -> object:
     inventory.display_inventory()
     print(f"Total inventory price: €{inventory.sum_inventory():,.2f}")
 
+    p1.price = 100.20
+    p1.quantity = 199
+    inventory.display_inventory()
+    print(f"Total inventory price: €{inventory.sum_inventory():,.2f}")
+
 
 if __name__ == "__main__":
     main()
